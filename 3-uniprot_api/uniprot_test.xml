@@ -1,0 +1,699 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<uniprot xmlns="http://uniprot.org/uniprot" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://uniprot.org/uniprot http://www.uniprot.org/support/docs/uniprot.xsd">
+<entry dataset="Swiss-Prot" created="1996-10-01" modified="2015-07-22" version="138">
+<accession>P54227</accession>
+<name>STMN1_MOUSE</name>
+<protein>
+<recommendedName>
+<fullName>Stathmin</fullName>
+</recommendedName>
+<alternativeName>
+<fullName>Leukemia-associated gene protein</fullName>
+</alternativeName>
+<alternativeName>
+<fullName>Leukemia-associated phosphoprotein p18</fullName>
+</alternativeName>
+<alternativeName>
+<fullName>Metablastin</fullName>
+</alternativeName>
+<alternativeName>
+<fullName>Oncoprotein 18</fullName>
+<shortName>Op18</shortName>
+</alternativeName>
+<alternativeName>
+<fullName>Phosphoprotein p19</fullName>
+<shortName>pp19</shortName>
+</alternativeName>
+<alternativeName>
+<fullName>Prosolin</fullName>
+</alternativeName>
+<alternativeName>
+<fullName>Protein Pr22</fullName>
+</alternativeName>
+<alternativeName>
+<fullName>pp17</fullName>
+</alternativeName>
+</protein>
+<gene>
+<name type="primary">Stmn1</name>
+<name type="synonym">Lag</name>
+<name type="synonym">Lap18</name>
+<name type="synonym">Pr22</name>
+</gene>
+<organism>
+<name type="scientific">Mus musculus</name>
+<name type="common">Mouse</name>
+<dbReference type="NCBI Taxonomy" id="10090"/>
+<lineage>
+<taxon>Eukaryota</taxon>
+<taxon>Metazoa</taxon>
+<taxon>Chordata</taxon>
+<taxon>Craniata</taxon>
+<taxon>Vertebrata</taxon>
+<taxon>Euteleostomi</taxon>
+<taxon>Mammalia</taxon>
+<taxon>Eutheria</taxon>
+<taxon>Euarchontoglires</taxon>
+<taxon>Glires</taxon>
+<taxon>Rodentia</taxon>
+<taxon>Sciurognathi</taxon>
+<taxon>Muroidea</taxon>
+<taxon>Muridae</taxon>
+<taxon>Murinae</taxon>
+<taxon>Mus</taxon>
+<taxon>Mus</taxon>
+</lineage>
+</organism>
+<reference key="1">
+<citation type="journal article" date="1993" name="Genomics" volume="18" first="360" last="373">
+<title>Molecular diversity of the SCG10/stathmin gene family in the mouse.</title>
+<authorList>
+<person name="Okazaki T."/>
+<person name="Yoshida B.N."/>
+<person name="Avraham K.B."/>
+<person name="Wang H."/>
+<person name="Wuenschell C.W."/>
+<person name="Jenkins N.A."/>
+<person name="Copeland N.G."/>
+<person name="Anderson D.J."/>
+<person name="Mori N."/>
+</authorList>
+<dbReference type="PubMed" id="8288240"/>
+<dbReference type="DOI" id="10.1006/geno.1993.1477"/>
+</citation>
+<scope>NUCLEOTIDE SEQUENCE [GENOMIC DNA]</scope>
+</reference>
+<reference key="2">
+<citation type="journal article" date="1994" name="Genomics" volume="21" first="298" last="298">
+<authorList>
+<person name="Okazaki T."/>
+<person name="Yoshida B.N."/>
+<person name="Avraham K.B."/>
+<person name="Wang H."/>
+<person name="Wuenschell C.W."/>
+<person name="Jenkins N.A."/>
+<person name="Copeland N.G."/>
+<person name="Anderson D.J."/>
+<person name="Mori N."/>
+</authorList>
+</citation>
+<scope>ERRATUM</scope>
+</reference>
+<reference key="3">
+<citation type="journal article" date="1996" name="Cell Struct. Funct." volume="21" first="237" last="243">
+<title>Transcriptional and post-transcriptional regulation of pr22 (Op18) with proliferation control.</title>
+<authorList>
+<person name="Hosoya H."/>
+<person name="Ishikawa K."/>
+<person name="Dohi N."/>
+<person name="Marunouchi T."/>
+</authorList>
+<dbReference type="PubMed" id="8906359"/>
+</citation>
+<scope>NUCLEOTIDE SEQUENCE [MRNA]</scope>
+<source>
+<strain>C57BL/6</strain>
+</source>
+</reference>
+<reference key="4">
+<citation type="journal article" date="2004" name="Genome Res." volume="14" first="2121" last="2127">
+<title>The status, quality, and expansion of the NIH full-length cDNA project: the Mammalian Gene Collection (MGC).</title>
+<authorList>
+<consortium name="The MGC Project Team"/>
+</authorList>
+<dbReference type="PubMed" id="15489334"/>
+<dbReference type="DOI" id="10.1101/gr.2596504"/>
+</citation>
+<scope>NUCLEOTIDE SEQUENCE [LARGE SCALE MRNA]</scope>
+<source>
+<strain>129</strain>
+<tissue>Mammary gland</tissue>
+<tissue>Retina</tissue>
+</source>
+</reference>
+<reference key="5">
+<citation type="submission" date="2007-07" db="UniProtKB">
+<authorList>
+<person name="Lubec G."/>
+<person name="Klug S."/>
+<person name="Yang J.W."/>
+<person name="Zigmond M."/>
+</authorList>
+</citation>
+<scope>PROTEIN SEQUENCE OF 15-27</scope>
+<scope>IDENTIFICATION BY MASS SPECTROMETRY</scope>
+<source>
+<tissue>Brain</tissue>
+<tissue>Hippocampus</tissue>
+</source>
+</reference>
+<reference key="6">
+<citation type="journal article" date="1993" name="J. Biol. Chem." volume="268" first="20076" last="20084">
+<title>Multiple phosphorylation of stathmin. Identification of four sites phosphorylated in intact cells and in vitro by cyclic AMP-dependent protein kinase and p34cdc2.</title>
+<authorList>
+<person name="Beretta L."/>
+<person name="Dobransky T."/>
+<person name="Sobel A."/>
+</authorList>
+<dbReference type="PubMed" id="8376365"/>
+</citation>
+<scope>PHOSPHORYLATION AT SER-16; SER-25; SER-38 AND SER-63</scope>
+</reference>
+<reference key="7">
+<citation type="journal article" date="1995" name="Proc. Natl. Acad. Sci. U.S.A." volume="92" first="3100" last="3104">
+<title>Stathmin interaction with a putative kinase and coiled-coil-forming protein domains.</title>
+<authorList>
+<person name="Maucuer A."/>
+<person name="Camonis J.H."/>
+<person name="Sobel A."/>
+</authorList>
+<dbReference type="PubMed" id="7724523"/>
+<dbReference type="DOI" id="10.1073/pnas.92.8.3100"/>
+</citation>
+<scope>INTERACTION WITH KIST</scope>
+<source>
+<tissue>Embryo</tissue>
+</source>
+</reference>
+<reference key="8">
+<citation type="journal article" date="2004" name="Mol. Cell. Proteomics" volume="3" first="1093" last="1101">
+<title>Phosphoproteomic analysis of the developing mouse brain.</title>
+<authorList>
+<person name="Ballif B.A."/>
+<person name="Villen J."/>
+<person name="Beausoleil S.A."/>
+<person name="Schwartz D."/>
+<person name="Gygi S.P."/>
+</authorList>
+<dbReference type="PubMed" id="15345747"/>
+<dbReference type="DOI" id="10.1074/mcp.M400085-MCP200"/>
+</citation>
+<scope>PHOSPHORYLATION [LARGE SCALE ANALYSIS] AT SER-25 AND SER-38</scope>
+<scope>IDENTIFICATION BY MASS SPECTROMETRY [LARGE SCALE ANALYSIS]</scope>
+<source>
+<tissue>Embryonic brain</tissue>
+</source>
+</reference>
+<reference key="9">
+<citation type="journal article" date="2005" name="Cell" volume="123" first="697" last="709">
+<title>Stathmin, a gene enriched in the amygdala, controls both learned and innate fear.</title>
+<authorList>
+<person name="Shumyatsky G.P."/>
+<person name="Malleret G."/>
+<person name="Shin R.-M."/>
+<person name="Takizawa S."/>
+<person name="Tully K."/>
+<person name="Tsvetkov E."/>
+<person name="Zakharenko S.S."/>
+<person name="Joseph J."/>
+<person name="Vronskaya S."/>
+<person name="Yin D."/>
+<person name="Schubart U.K."/>
+<person name="Kandel E.R."/>
+<person name="Bolshakov V.Y."/>
+</authorList>
+<dbReference type="PubMed" id="16286011"/>
+<dbReference type="DOI" id="10.1016/j.cell.2005.08.038"/>
+</citation>
+<scope>FUNCTION IN CONTROL OF FEAR</scope>
+<scope>TISSUE SPECIFICITY</scope>
+<scope>DISRUPTION PHENOTYPE</scope>
+</reference>
+<reference key="10">
+<citation type="journal article" date="2007" name="Mol. Cell. Proteomics" volume="6" first="283" last="293">
+<title>Qualitative and quantitative analyses of protein phosphorylation in naive and stimulated mouse synaptosomal preparations.</title>
+<authorList>
+<person name="Munton R.P."/>
+<person name="Tweedie-Cullen R."/>
+<person name="Livingstone-Zatchej M."/>
+<person name="Weinandy F."/>
+<person name="Waidelich M."/>
+<person name="Longo D."/>
+<person name="Gehrig P."/>
+<person name="Potthast F."/>
+<person name="Rutishauser D."/>
+<person name="Gerrits B."/>
+<person name="Panse C."/>
+<person name="Schlapbach R."/>
+<person name="Mansuy I.M."/>
+</authorList>
+<dbReference type="PubMed" id="17114649"/>
+<dbReference type="DOI" id="10.1074/mcp.M600046-MCP200"/>
+</citation>
+<scope>IDENTIFICATION BY MASS SPECTROMETRY [LARGE SCALE ANALYSIS]</scope>
+<source>
+<tissue>Brain cortex</tissue>
+</source>
+</reference>
+<reference key="11">
+<citation type="journal article" date="2007" name="Proc. Natl. Acad. Sci. U.S.A." volume="104" first="1488" last="1493">
+<title>Large-scale phosphorylation analysis of mouse liver.</title>
+<authorList>
+<person name="Villen J."/>
+<person name="Beausoleil S.A."/>
+<person name="Gerber S.A."/>
+<person name="Gygi S.P."/>
+</authorList>
+<dbReference type="PubMed" id="17242355"/>
+<dbReference type="DOI" id="10.1073/pnas.0609836104"/>
+</citation>
+<scope>PHOSPHORYLATION [LARGE SCALE ANALYSIS] AT SER-16 AND SER-25</scope>
+<scope>IDENTIFICATION BY MASS SPECTROMETRY [LARGE SCALE ANALYSIS]</scope>
+<source>
+<tissue>Liver</tissue>
+</source>
+</reference>
+<reference key="12">
+<citation type="journal article" date="2009" name="Mol. Cell. Proteomics" volume="8" first="904" last="912">
+<title>Large scale localization of protein phosphorylation by use of electron capture dissociation mass spectrometry.</title>
+<authorList>
+<person name="Sweet S.M."/>
+<person name="Bailey C.M."/>
+<person name="Cunningham D.L."/>
+<person name="Heath J.K."/>
+<person name="Cooper H.J."/>
+</authorList>
+<dbReference type="PubMed" id="19131326"/>
+<dbReference type="DOI" id="10.1074/mcp.M800451-MCP200"/>
+</citation>
+<scope>PHOSPHORYLATION [LARGE SCALE ANALYSIS] AT SER-16</scope>
+<scope>IDENTIFICATION BY MASS SPECTROMETRY [LARGE SCALE ANALYSIS]</scope>
+<source>
+<tissue>Embryonic fibroblast</tissue>
+</source>
+</reference>
+<reference key="13">
+<citation type="journal article" date="2013" name="Mol. Cell" volume="50" first="919" last="930">
+<title>SIRT5-mediated lysine desuccinylation impacts diverse metabolic pathways.</title>
+<authorList>
+<person name="Park J."/>
+<person name="Chen Y."/>
+<person name="Tishkoff D.X."/>
+<person name="Peng C."/>
+<person name="Tan M."/>
+<person name="Dai L."/>
+<person name="Xie Z."/>
+<person name="Zhang Y."/>
+<person name="Zwaans B.M."/>
+<person name="Skinner M.E."/>
+<person name="Lombard D.B."/>
+<person name="Zhao Y."/>
+</authorList>
+<dbReference type="PubMed" id="23806337"/>
+<dbReference type="DOI" id="10.1016/j.molcel.2013.06.001"/>
+</citation>
+<scope>ACETYLATION [LARGE SCALE ANALYSIS] AT LYS-119</scope>
+<scope>IDENTIFICATION BY MASS SPECTROMETRY [LARGE SCALE ANALYSIS]</scope>
+<source>
+<tissue>Embryonic fibroblast</tissue>
+</source>
+</reference>
+<comment type="function">
+<text evidence="1 6">Involved in the regulation of the microtubule (MT) filament system by destabilizing microtubules. Prevents assembly and promotes disassembly of microtubules. Phosphorylation at Ser-16 may be required for axon formation during neurogenesis (By similarity). Involved in the control of the learned and innate fear.</text>
+</comment>
+<comment type="subunit">
+<text evidence="10">Binds to two alpha/beta-tubulin heterodimers. Interacts with KIST.</text>
+</comment>
+<comment type="interaction">
+<interactant intactId="EBI-1006438"/>
+<interactant intactId="EBI-1005742">
+<id>P46414</id>
+<label>Cdkn1b</label>
+</interactant>
+<organismsDiffer>false</organismsDiffer>
+<experiments>2</experiments>
+</comment>
+<comment type="subcellular location">
+<subcellularLocation>
+<location>Cytoplasm</location>
+<location>Cytoskeleton</location>
+</subcellularLocation>
+</comment>
+<comment type="tissue specificity">
+<text evidence="6">Highly expressed in the lateral nucleus of the amygdala.</text>
+</comment>
+<comment type="PTM">
+<text evidence="1 12">Many different phosphorylated forms are observed depending on specific combinations among the sites which can be phosphorylated. MAPK is responsible for the phosphorylation of stathmin in response to NGF (Probable). Phosphorylation at Ser-16 seems to be required for neuron polarization (By similarity).</text>
+</comment>
+<comment type="disruption phenotype">
+<text evidence="6">Mice show deficits in spike-timing-dependent long-term potentiation, exhibit decreased memory in amygdala-dependent fear conditioning and fail to recognize danger in innately aversive environments.</text>
+</comment>
+<comment type="similarity">
+<text evidence="12">Belongs to the stathmin family.</text>
+</comment>
+<comment type="similarity">
+<text evidence="4">Contains 1 SLD (stathmin-like) domain.</text>
+</comment>
+<dbReference type="EMBL" id="L20256">
+<property type="status" value="NOT_ANNOTATED_CDS"/>
+<property type="molecule type" value="Genomic_DNA"/>
+</dbReference>
+<dbReference type="EMBL" id="L20257">
+<property type="status" value="NOT_ANNOTATED_CDS"/>
+<property type="molecule type" value="Genomic_DNA"/>
+</dbReference>
+<dbReference type="EMBL" id="L20258">
+<property type="status" value="NOT_ANNOTATED_CDS"/>
+<property type="molecule type" value="Genomic_DNA"/>
+</dbReference>
+<dbReference type="EMBL" id="X94915">
+<property type="protein sequence ID" value="CAA64401.1"/>
+<property type="molecule type" value="mRNA"/>
+</dbReference>
+<dbReference type="EMBL" id="BC010581">
+<property type="protein sequence ID" value="AAH10581.1"/>
+<property type="molecule type" value="mRNA"/>
+</dbReference>
+<dbReference type="EMBL" id="BC031831">
+<property type="protein sequence ID" value="AAH31831.1"/>
+<property type="molecule type" value="mRNA"/>
+</dbReference>
+<dbReference type="EMBL" id="BC054396">
+<property type="protein sequence ID" value="AAH54396.1"/>
+<property type="molecule type" value="mRNA"/>
+</dbReference>
+<dbReference type="CCDS" id="CCDS18772.1"/>
+<dbReference type="PIR" id="B48917">
+<property type="entry name" value="B48917"/>
+</dbReference>
+<dbReference type="RefSeq" id="NP_062615.1">
+<property type="nucleotide sequence ID" value="NM_019641.4"/>
+</dbReference>
+<dbReference type="UniGene" id="Mm.378957"/>
+<dbReference type="ProteinModelPortal" id="P54227"/>
+<dbReference type="SMR" id="P54227">
+<property type="residue range" value="6-141"/>
+</dbReference>
+<dbReference type="BioGrid" id="201092">
+<property type="interactions" value="2"/>
+</dbReference>
+<dbReference type="IntAct" id="P54227">
+<property type="interactions" value="2"/>
+</dbReference>
+<dbReference type="STRING" id="10090.ENSMUSP00000030636"/>
+<dbReference type="PhosphoSite" id="P54227"/>
+<dbReference type="REPRODUCTION-2DPAGE" id="P54227"/>
+<dbReference type="UCD-2DPAGE" id="P54227"/>
+<dbReference type="MaxQB" id="P54227"/>
+<dbReference type="PaxDb" id="P54227"/>
+<dbReference type="PRIDE" id="P54227"/>
+<dbReference type="Ensembl" id="ENSMUST00000030636">
+<property type="protein sequence ID" value="ENSMUSP00000030636"/>
+<property type="gene ID" value="ENSMUSG00000028832"/>
+</dbReference>
+<dbReference type="Ensembl" id="ENSMUST00000105868">
+<property type="protein sequence ID" value="ENSMUSP00000101494"/>
+<property type="gene ID" value="ENSMUSG00000028832"/>
+</dbReference>
+<dbReference type="GeneID" id="16765"/>
+<dbReference type="KEGG" id="mmu:16765"/>
+<dbReference type="UCSC" id="uc008vfc.2">
+<property type="organism name" value="mouse"/>
+</dbReference>
+<dbReference type="CTD" id="3925"/>
+<dbReference type="MGI" id="MGI:96739">
+<property type="gene designation" value="Stmn1"/>
+</dbReference>
+<dbReference type="eggNOG" id="NOG75290"/>
+<dbReference type="GeneTree" id="ENSGT00390000003691"/>
+<dbReference type="HOGENOM" id="HOG000013197"/>
+<dbReference type="HOVERGEN" id="HBG054037"/>
+<dbReference type="InParanoid" id="P54227"/>
+<dbReference type="KO" id="K04381"/>
+<dbReference type="OMA" id="DAKSEFP"/>
+<dbReference type="OrthoDB" id="EOG744TBN"/>
+<dbReference type="PhylomeDB" id="P54227"/>
+<dbReference type="TreeFam" id="TF326935"/>
+<dbReference type="ChiTaRS" id="Stmn1">
+<property type="organism name" value="mouse"/>
+</dbReference>
+<dbReference type="NextBio" id="290586"/>
+<dbReference type="PRO" id="PR:P54227"/>
+<dbReference type="Proteomes" id="UP000000589">
+<property type="component" value="Chromosome 4"/>
+</dbReference>
+<dbReference type="Bgee" id="P54227"/>
+<dbReference type="CleanEx" id="MM_STMN1"/>
+<dbReference type="ExpressionAtlas" id="P54227">
+<property type="expression patterns" value="baseline and differential"/>
+</dbReference>
+<dbReference type="Genevisible" id="P54227">
+<property type="organism ID" value="MM"/>
+</dbReference>
+<dbReference type="GO" id="GO:0005737">
+<property type="term" value="C:cytoplasm"/>
+<property type="evidence" value="ECO:0000314"/>
+<property type="project" value="MGI"/>
+</dbReference>
+<dbReference type="GO" id="GO:0005829">
+<property type="term" value="C:cytosol"/>
+<property type="evidence" value="ECO:0000314"/>
+<property type="project" value="MGI"/>
+</dbReference>
+<dbReference type="GO" id="GO:0070062">
+<property type="term" value="C:extracellular exosome"/>
+<property type="evidence" value="ECO:0000266"/>
+<property type="project" value="MGI"/>
+</dbReference>
+<dbReference type="GO" id="GO:0005622">
+<property type="term" value="C:intracellular"/>
+<property type="evidence" value="ECO:0000266"/>
+<property type="project" value="MGI"/>
+</dbReference>
+<dbReference type="GO" id="GO:0016020">
+<property type="term" value="C:membrane"/>
+<property type="evidence" value="ECO:0000314"/>
+<property type="project" value="MGI"/>
+</dbReference>
+<dbReference type="GO" id="GO:0005874">
+<property type="term" value="C:microtubule"/>
+<property type="evidence" value="ECO:0000501"/>
+<property type="project" value="UniProtKB-KW"/>
+</dbReference>
+<dbReference type="GO" id="GO:0043005">
+<property type="term" value="C:neuron projection"/>
+<property type="evidence" value="ECO:0000318"/>
+<property type="project" value="GO_Central"/>
+</dbReference>
+<dbReference type="GO" id="GO:0015631">
+<property type="term" value="F:tubulin binding"/>
+<property type="evidence" value="ECO:0000266"/>
+<property type="project" value="MGI"/>
+</dbReference>
+<dbReference type="GO" id="GO:0007409">
+<property type="term" value="P:axonogenesis"/>
+<property type="evidence" value="ECO:0000315"/>
+<property type="project" value="MGI"/>
+</dbReference>
+<dbReference type="GO" id="GO:0007420">
+<property type="term" value="P:brain development"/>
+<property type="evidence" value="ECO:0000501"/>
+<property type="project" value="Ensembl"/>
+</dbReference>
+<dbReference type="GO" id="GO:0007019">
+<property type="term" value="P:microtubule depolymerization"/>
+<property type="evidence" value="ECO:0000266"/>
+<property type="project" value="MGI"/>
+</dbReference>
+<dbReference type="GO" id="GO:0007052">
+<property type="term" value="P:mitotic spindle organization"/>
+<property type="evidence" value="ECO:0000266"/>
+<property type="project" value="MGI"/>
+</dbReference>
+<dbReference type="GO" id="GO:0031115">
+<property type="term" value="P:negative regulation of microtubule polymerization"/>
+<property type="evidence" value="ECO:0000314"/>
+<property type="project" value="MGI"/>
+</dbReference>
+<dbReference type="GO" id="GO:0031175">
+<property type="term" value="P:neuron projection development"/>
+<property type="evidence" value="ECO:0000318"/>
+<property type="project" value="GO_Central"/>
+</dbReference>
+<dbReference type="GO" id="GO:0051272">
+<property type="term" value="P:positive regulation of cellular component movement"/>
+<property type="evidence" value="ECO:0000316"/>
+<property type="project" value="MGI"/>
+</dbReference>
+<dbReference type="GO" id="GO:0009615">
+<property type="term" value="P:response to virus"/>
+<property type="evidence" value="ECO:0000501"/>
+<property type="project" value="Ensembl"/>
+</dbReference>
+<dbReference type="InterPro" id="IPR030514">
+<property type="entry name" value="Stathmin_CS"/>
+</dbReference>
+<dbReference type="InterPro" id="IPR000956">
+<property type="entry name" value="Stathmin_fam"/>
+</dbReference>
+<dbReference type="PANTHER" id="PTHR10104">
+<property type="entry name" value="PTHR10104"/>
+<property type="match status" value="1"/>
+</dbReference>
+<dbReference type="Pfam" id="PF00836">
+<property type="entry name" value="Stathmin"/>
+<property type="match status" value="1"/>
+</dbReference>
+<dbReference type="PIRSF" id="PIRSF002285">
+<property type="entry name" value="Stathmin"/>
+<property type="match status" value="1"/>
+</dbReference>
+<dbReference type="PRINTS" id="PR00345">
+<property type="entry name" value="STATHMIN"/>
+</dbReference>
+<dbReference type="SUPFAM" id="SSF101494">
+<property type="entry name" value="SSF101494"/>
+<property type="match status" value="1"/>
+</dbReference>
+<dbReference type="PROSITE" id="PS00563">
+<property type="entry name" value="STATHMIN_1"/>
+<property type="match status" value="1"/>
+</dbReference>
+<dbReference type="PROSITE" id="PS01041">
+<property type="entry name" value="STATHMIN_2"/>
+<property type="match status" value="1"/>
+</dbReference>
+<dbReference type="PROSITE" id="PS51663">
+<property type="entry name" value="STATHMIN_3"/>
+<property type="match status" value="1"/>
+</dbReference>
+<proteinExistence type="evidence at protein level"/>
+<keyword id="KW-0007">Acetylation</keyword>
+<keyword id="KW-0175">Coiled coil</keyword>
+<keyword id="KW-0181">Complete proteome</keyword>
+<keyword id="KW-0963">Cytoplasm</keyword>
+<keyword id="KW-0206">Cytoskeleton</keyword>
+<keyword id="KW-0217">Developmental protein</keyword>
+<keyword id="KW-0221">Differentiation</keyword>
+<keyword id="KW-0903">Direct protein sequencing</keyword>
+<keyword id="KW-0493">Microtubule</keyword>
+<keyword id="KW-0524">Neurogenesis</keyword>
+<keyword id="KW-0597">Phosphoprotein</keyword>
+<keyword id="KW-1185">Reference proteome</keyword>
+<feature type="initiator methionine" description="Removed" evidence="2">
+<location>
+<position position="1"/>
+</location>
+</feature>
+<feature type="chain" description="Stathmin" id="PRO_0000182390">
+<location>
+<begin position="2"/>
+<end position="149"/>
+</location>
+</feature>
+<feature type="domain" description="SLD" evidence="4">
+<location>
+<begin position="4"/>
+<end position="145"/>
+</location>
+</feature>
+<feature type="coiled-coil region" evidence="3">
+<location>
+<begin position="41"/>
+<end position="140"/>
+</location>
+</feature>
+<feature type="modified residue" description="N-acetylalanine" evidence="2">
+<location>
+<position position="2"/>
+</location>
+</feature>
+<feature type="modified residue" description="N6-acetyllysine" evidence="2">
+<location>
+<position position="9"/>
+</location>
+</feature>
+<feature type="modified residue" description="Phosphoserine; by PKA" evidence="7 8 11">
+<location>
+<position position="16"/>
+</location>
+</feature>
+<feature type="modified residue" description="Phosphoserine; by CDK1, MAPK1 and MAPK3" evidence="5 7 11">
+<location>
+<position position="25"/>
+</location>
+</feature>
+<feature type="modified residue" description="Phosphoserine" evidence="2">
+<location>
+<position position="31"/>
+</location>
+</feature>
+<feature type="modified residue" description="Phosphoserine; by CDK1, MAPK1 and MAPK3" evidence="5 11">
+<location>
+<position position="38"/>
+</location>
+</feature>
+<feature type="modified residue" description="Phosphoserine; by PKA" evidence="11">
+<location>
+<position position="63"/>
+</location>
+</feature>
+<feature type="modified residue" description="N6-acetyllysine" evidence="2">
+<location>
+<position position="100"/>
+</location>
+</feature>
+<feature type="modified residue" description="N6-acetyllysine" evidence="9">
+<location>
+<position position="119"/>
+</location>
+</feature>
+<evidence key="1" type="ECO:0000250"/>
+<evidence key="2" type="ECO:0000250">
+<source>
+<dbReference type="UniProtKB" id="P16949"/>
+</source>
+</evidence>
+<evidence key="3" type="ECO:0000255"/>
+<evidence key="4" type="ECO:0000255">
+<source>
+<dbReference type="PROSITE-ProRule" id="PRU00998"/>
+</source>
+</evidence>
+<evidence key="5" type="ECO:0000269">
+<source>
+<dbReference type="PubMed" id="15345747"/>
+</source>
+</evidence>
+<evidence key="6" type="ECO:0000269">
+<source>
+<dbReference type="PubMed" id="16286011"/>
+</source>
+</evidence>
+<evidence key="7" type="ECO:0000269">
+<source>
+<dbReference type="PubMed" id="17242355"/>
+</source>
+</evidence>
+<evidence key="8" type="ECO:0000269">
+<source>
+<dbReference type="PubMed" id="19131326"/>
+</source>
+</evidence>
+<evidence key="9" type="ECO:0000269">
+<source>
+<dbReference type="PubMed" id="23806337"/>
+</source>
+</evidence>
+<evidence key="10" type="ECO:0000269">
+<source>
+<dbReference type="PubMed" id="7724523"/>
+</source>
+</evidence>
+<evidence key="11" type="ECO:0000269">
+<source>
+<dbReference type="PubMed" id="8376365"/>
+</source>
+</evidence>
+<evidence key="12" type="ECO:0000305"/>
+<sequence length="149" mass="17274" checksum="616526E0A6667BDA" modified="2007-01-23" version="2">
+MASSDIQVKELEKRASGQAFELILSPRSKESVPDFPLSPPKKKDLSLEEIQKKLEAAEER
+RKSHEAEVLKQLAEKREHEKEVLQKAIEENNNFSKMAEEKLTHKMEANKENREAQMAAKL
+ERLREKDKHVEEVRKNKESKDPADETEAD
+</sequence>
+</entry>
+<copyright>
+Copyrighted by the UniProt Consortium, see http://www.uniprot.org/terms
+Distributed under the Creative Commons Attribution-NoDerivs License
+</copyright>
+</uniprot>

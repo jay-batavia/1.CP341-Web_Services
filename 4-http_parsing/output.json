@@ -1,0 +1,10 @@
+C:\Users\Jay\Documents\2015-2016\CP341 - Web Services\cURL>curl.exe --data "para
+m1=value1&param2=value2" http://localhost:8000/1234
+{
+    "content_length": "27",
+    "method_name": "POST",
+    "param1": "value1",
+    "param2": "value2",
+    "path_info": "/1234",
+    "query_string": ""
+}

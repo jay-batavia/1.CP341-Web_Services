@@ -1,0 +1,817 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<uniprot xmlns="http://uniprot.org/uniprot" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://uniprot.org/uniprot http://www.uniprot.org/support/docs/uniprot.xsd">
+<entry dataset="Swiss-Prot" created="1988-11-01" modified="2015-02-04" version="128">
+<accession>P08941</accession>
+<name>ROS1_CHICK</name>
+<protein>
+<recommendedName>
+<fullName>Proto-oncogene tyrosine-protein kinase ROS</fullName>
+<ecNumber>2.7.10.1</ecNumber>
+</recommendedName>
+<alternativeName>
+<fullName>Proto-oncogene c-Ros</fullName>
+</alternativeName>
+<alternativeName>
+<fullName>Proto-oncogene c-Ros-1</fullName>
+</alternativeName>
+<alternativeName>
+<fullName>Receptor tyrosine kinase c-ros oncogene 1</fullName>
+</alternativeName>
+<alternativeName>
+<fullName>c-Ros receptor tyrosine kinase</fullName>
+</alternativeName>
+</protein>
+<gene>
+<name type="primary">ROS1</name>
+</gene>
+<organism>
+<name type="scientific">Gallus gallus</name>
+<name type="common">Chicken</name>
+<dbReference type="NCBI Taxonomy" id="9031"/>
+<lineage>
+<taxon>Eukaryota</taxon>
+<taxon>Metazoa</taxon>
+<taxon>Chordata</taxon>
+<taxon>Craniata</taxon>
+<taxon>Vertebrata</taxon>
+<taxon>Euteleostomi</taxon>
+<taxon>Archelosauria</taxon>
+<taxon>Archosauria</taxon>
+<taxon>Dinosauria</taxon>
+<taxon>Saurischia</taxon>
+<taxon>Theropoda</taxon>
+<taxon>Coelurosauria</taxon>
+<taxon>Aves</taxon>
+<taxon>Neognathae</taxon>
+<taxon>Galloanserae</taxon>
+<taxon>Galliformes</taxon>
+<taxon>Phasianidae</taxon>
+<taxon>Phasianinae</taxon>
+<taxon>Gallus</taxon>
+</lineage>
+</organism>
+<reference key="1">
+<citation type="journal article" date="1991" name="Oncogene" volume="6" first="257" last="264">
+<title>The proto-oncogene c-ros codes for a transmembrane tyrosine protein kinase sharing sequence and structural homology with sevenless protein of Drosophila melanogaster.</title>
+<authorList>
+<person name="Chen J.M."/>
+<person name="Heller D."/>
+<person name="Poon B."/>
+<person name="Kang L."/>
+<person name="Wang L.-H."/>
+</authorList>
+<dbReference type="PubMed" id="1900358"/>
+</citation>
+<scope>NUCLEOTIDE SEQUENCE [MRNA]</scope>
+<scope>TISSUE SPECIFICITY</scope>
+</reference>
+<reference key="2">
+<citation type="journal article" date="1986" name="Mol. Cell. Biol." volume="6" first="3000" last="3004">
+<title>Human c-ros-1 gene homologous to the v-ros sequence of UR2 sarcoma virus encodes for a transmembrane receptorlike molecule.</title>
+<authorList>
+<person name="Matsushime H."/>
+<person name="Wang L.-H."/>
+<person name="Shibuya M."/>
+</authorList>
+<dbReference type="PubMed" id="3023956"/>
+</citation>
+<scope>NUCLEOTIDE SEQUENCE OF 1805-1867</scope>
+</reference>
+<reference key="3">
+<citation type="journal article" date="1986" name="Mol. Cell. Biol." volume="6" first="1478" last="1486">
+<title>Proto-oncogene c-ros codes for a molecule with structural features common to those of growth factor receptors and displays tissue specific and developmentally regulated expression.</title>
+<authorList>
+<person name="Neckameyer W.S."/>
+<person name="Shibuya M."/>
+<person name="Hsu M.-T."/>
+<person name="Wang L.-H."/>
+</authorList>
+<dbReference type="PubMed" id="3023892"/>
+</citation>
+<scope>NUCLEOTIDE SEQUENCE [GENOMIC DNA] OF 1868-2292</scope>
+</reference>
+<reference key="4">
+<citation type="journal article" date="1987" name="Oncogene" volume="2" first="9" last="14">
+<title>Chicken proto-oncogene c-ros cDNA clones: identification of a c-ros RNA transcript and deduction of the amino acid sequence of the carboxyl terminus of the c-ros product.</title>
+<authorList>
+<person name="Podell S.B."/>
+<person name="Sefton B.M."/>
+</authorList>
+<dbReference type="PubMed" id="3325887"/>
+</citation>
+<scope>NUCLEOTIDE SEQUENCE [MRNA] OF 2010-2311</scope>
+<source>
+<tissue>Kidney</tissue>
+</source>
+</reference>
+<reference key="5">
+<citation type="journal article" date="1996" name="Mol. Cell. Biol." volume="16" first="1509" last="1518">
+<title>Two chimeric receptors of epidermal growth factor receptor and c-Ros that differ in their transmembrane domains have opposite effects on cell growth.</title>
+<authorList>
+<person name="Xiong Q."/>
+<person name="Chan J.L."/>
+<person name="Zong C.S."/>
+<person name="Wang L.H."/>
+</authorList>
+<dbReference type="PubMed" id="8657124"/>
+</citation>
+<scope>FUNCTION IN CELL PROLIFERATION</scope>
+<scope>SUBCELLULAR LOCATION</scope>
+</reference>
+<reference key="6">
+<citation type="journal article" date="1998" name="J. Biol. Chem." volume="273" first="28065" last="28072">
+<title>Stat3 plays an important role in oncogenic Ros- and insulin-like growth factor I receptor-induced anchorage-independent growth.</title>
+<authorList>
+<person name="Zong C.S."/>
+<person name="Zeng L."/>
+<person name="Jiang Y."/>
+<person name="Sadowski H.B."/>
+<person name="Wang L.H."/>
+</authorList>
+<dbReference type="PubMed" id="9774423"/>
+<dbReference type="DOI" id="10.1074/jbc.273.43.28065"/>
+</citation>
+<scope>FUNCTION IN STAT3 ACTIVATION</scope>
+</reference>
+<reference key="7">
+<citation type="journal article" date="2000" name="Mol. Cell. Biol." volume="20" first="9212" last="9224">
+<title>Vav3 mediates receptor protein tyrosine kinase signaling, regulates GTPase activity, modulates cell morphology, and induces cell transformation.</title>
+<authorList>
+<person name="Zeng L."/>
+<person name="Sachdev P."/>
+<person name="Yan L."/>
+<person name="Chan J.L."/>
+<person name="Trenkle T."/>
+<person name="McClelland M."/>
+<person name="Welsh J."/>
+<person name="Wang L.H."/>
+</authorList>
+<dbReference type="PubMed" id="11094073"/>
+<dbReference type="DOI" id="10.1128/MCB.20.24.9212-9224.2000"/>
+</citation>
+<scope>FUNCTION IN VAV3 ACTIVATION</scope>
+<scope>INTERACTION WITH VAV3</scope>
+</reference>
+<reference key="8">
+<citation type="journal article" date="2002" name="J. Biol. Chem." volume="277" first="11107" last="11115">
+<title>The role of phosphatidylinositol 3-kinase, rho family GTPases, and STAT3 in Ros-induced cell transformation.</title>
+<authorList>
+<person name="Nguyen K.T."/>
+<person name="Zong C.S."/>
+<person name="Uttamsingh S."/>
+<person name="Sachdev P."/>
+<person name="Bhanot M."/>
+<person name="Le M.T."/>
+<person name="Chan J.L."/>
+<person name="Wang L.H."/>
+</authorList>
+<dbReference type="PubMed" id="11799110"/>
+<dbReference type="DOI" id="10.1074/jbc.M108166200"/>
+</citation>
+<scope>FUNCTION IN PI3 KINASE AND STAT3 ACTIVATION</scope>
+</reference>
+<comment type="function">
+<text evidence="6 7 9 10">Orphan receptor tyrosine kinase (RTK) that may activate several downstream signaling pathways related to cell differentiation, proliferation, growth and survival including the PI3 kinase-mTOR signaling pathway. Mediates the phosphorylation of PTPN11, an activator of this pathway. May also phosphorylate and activate the transcription factor STAT3 to control anchorage-independent cell growth. Mediates the phosphorylation and the activation of VAV3, a guanine nucleotide exchange factor regulating cell morphology. May activate other downstream signaling proteins including AKT1, MAPK1, MAPK3, IRS1, and PLCG2.</text>
+</comment>
+<comment type="catalytic activity">
+<text evidence="5">ATP + a [protein]-L-tyrosine = ADP + a [protein]-L-tyrosine phosphate.</text>
+</comment>
+<comment type="subunit">
+<text evidence="6">Interacts with VAV3; constitutive interaction mediating VAV3 phosphorylation.</text>
+</comment>
+<comment type="subcellular location">
+<subcellularLocation>
+<location evidence="12">Cell membrane</location>
+<topology evidence="12">Single-pass type I membrane protein</topology>
+</subcellularLocation>
+</comment>
+<comment type="tissue specificity">
+<text evidence="8">Highest expression in kidney. Also expressed in gonad, thymus, bursa, brain and kidney.</text>
+</comment>
+<comment type="similarity">
+<text evidence="3">Belongs to the protein kinase superfamily. Tyr protein kinase family. Insulin receptor subfamily.</text>
+</comment>
+<comment type="similarity">
+<text evidence="4">Contains 9 fibronectin type-III domains.</text>
+</comment>
+<comment type="similarity">
+<text evidence="3">Contains 1 protein kinase domain.</text>
+</comment>
+<dbReference type="EC" id="2.7.10.1"/>
+<dbReference type="EMBL" id="M13013">
+<property type="protein sequence ID" value="AAA49058.1"/>
+<property type="molecule type" value="Genomic_DNA"/>
+</dbReference>
+<dbReference type="EMBL" id="X06770">
+<property type="protein sequence ID" value="CAA29938.1"/>
+<property type="molecule type" value="mRNA"/>
+</dbReference>
+<dbReference type="PIR" id="A60197">
+<property type="entry name" value="TVCHSR"/>
+</dbReference>
+<dbReference type="UniGene" id="Gga.702"/>
+<dbReference type="ProteinModelPortal" id="P08941"/>
+<dbReference type="STRING" id="9031.ENSGALP00000036566"/>
+<dbReference type="PaxDb" id="P08941"/>
+<dbReference type="PRIDE" id="P08941"/>
+<dbReference type="eggNOG" id="COG0515"/>
+<dbReference type="HOGENOM" id="HOG000137937"/>
+<dbReference type="HOVERGEN" id="HBG058631"/>
+<dbReference type="InParanoid" id="P08941"/>
+<dbReference type="PhylomeDB" id="P08941"/>
+<dbReference type="PRO" id="PR:P08941"/>
+<dbReference type="Proteomes" id="UP000000539">
+<property type="component" value="Unplaced"/>
+</dbReference>
+<dbReference type="GO" id="GO:0016021">
+<property type="term" value="C:integral component of membrane"/>
+<property type="evidence" value="ECO:0000501"/>
+<property type="project" value="UniProtKB-KW"/>
+</dbReference>
+<dbReference type="GO" id="GO:0005886">
+<property type="term" value="C:plasma membrane"/>
+<property type="evidence" value="ECO:0000501"/>
+<property type="project" value="UniProtKB-SubCell"/>
+</dbReference>
+<dbReference type="GO" id="GO:0005524">
+<property type="term" value="F:ATP binding"/>
+<property type="evidence" value="ECO:0000501"/>
+<property type="project" value="UniProtKB-KW"/>
+</dbReference>
+<dbReference type="GO" id="GO:0004713">
+<property type="term" value="F:protein tyrosine kinase activity"/>
+<property type="evidence" value="ECO:0000250"/>
+<property type="project" value="UniProtKB"/>
+</dbReference>
+<dbReference type="GO" id="GO:0004714">
+<property type="term" value="F:transmembrane receptor protein tyrosine kinase activity"/>
+<property type="evidence" value="ECO:0000501"/>
+<property type="project" value="UniProtKB-EC"/>
+</dbReference>
+<dbReference type="GO" id="GO:0030154">
+<property type="term" value="P:cell differentiation"/>
+<property type="evidence" value="ECO:0000250"/>
+<property type="project" value="UniProtKB"/>
+</dbReference>
+<dbReference type="GO" id="GO:0016049">
+<property type="term" value="P:cell growth"/>
+<property type="evidence" value="ECO:0000250"/>
+<property type="project" value="UniProtKB"/>
+</dbReference>
+<dbReference type="GO" id="GO:0008283">
+<property type="term" value="P:cell proliferation"/>
+<property type="evidence" value="ECO:0000250"/>
+<property type="project" value="UniProtKB"/>
+</dbReference>
+<dbReference type="GO" id="GO:0002066">
+<property type="term" value="P:columnar/cuboidal epithelial cell development"/>
+<property type="evidence" value="ECO:0000250"/>
+<property type="project" value="UniProtKB"/>
+</dbReference>
+<dbReference type="GO" id="GO:0018108">
+<property type="term" value="P:peptidyl-tyrosine phosphorylation"/>
+<property type="evidence" value="ECO:0000250"/>
+<property type="project" value="GOC"/>
+</dbReference>
+<dbReference type="GO" id="GO:0006468">
+<property type="term" value="P:protein phosphorylation"/>
+<property type="evidence" value="ECO:0000250"/>
+<property type="project" value="UniProtKB"/>
+</dbReference>
+<dbReference type="GO" id="GO:0070372">
+<property type="term" value="P:regulation of ERK1 and ERK2 cascade"/>
+<property type="evidence" value="ECO:0000250"/>
+<property type="project" value="UniProtKB"/>
+</dbReference>
+<dbReference type="GO" id="GO:0032006">
+<property type="term" value="P:regulation of TOR signaling"/>
+<property type="evidence" value="ECO:0000250"/>
+<property type="project" value="UniProtKB"/>
+</dbReference>
+<dbReference type="GO" id="GO:0007169">
+<property type="term" value="P:transmembrane receptor protein tyrosine kinase signaling pathway"/>
+<property type="evidence" value="ECO:0000501"/>
+<property type="project" value="InterPro"/>
+</dbReference>
+<dbReference type="Gene3D" id="2.120.10.30">
+<property type="match status" value="3"/>
+</dbReference>
+<dbReference type="Gene3D" id="2.60.40.10">
+<property type="match status" value="7"/>
+</dbReference>
+<dbReference type="InterPro" id="IPR011042">
+<property type="entry name" value="6-blade_b-propeller_TolB-like"/>
+</dbReference>
+<dbReference type="InterPro" id="IPR003961">
+<property type="entry name" value="FN3_dom"/>
+</dbReference>
+<dbReference type="InterPro" id="IPR013783">
+<property type="entry name" value="Ig-like_fold"/>
+</dbReference>
+<dbReference type="InterPro" id="IPR011009">
+<property type="entry name" value="Kinase-like_dom"/>
+</dbReference>
+<dbReference type="InterPro" id="IPR000033">
+<property type="entry name" value="LDLR_classB_rpt"/>
+</dbReference>
+<dbReference type="InterPro" id="IPR000719">
+<property type="entry name" value="Prot_kinase_dom"/>
+</dbReference>
+<dbReference type="InterPro" id="IPR017441">
+<property type="entry name" value="Protein_kinase_ATP_BS"/>
+</dbReference>
+<dbReference type="InterPro" id="IPR001245">
+<property type="entry name" value="Ser-Thr/Tyr_kinase_cat_dom"/>
+</dbReference>
+<dbReference type="InterPro" id="IPR008266">
+<property type="entry name" value="Tyr_kinase_AS"/>
+</dbReference>
+<dbReference type="InterPro" id="IPR020635">
+<property type="entry name" value="Tyr_kinase_cat_dom"/>
+</dbReference>
+<dbReference type="InterPro" id="IPR002011">
+<property type="entry name" value="Tyr_kinase_rcpt_2_CS"/>
+</dbReference>
+<dbReference type="Pfam" id="PF00041">
+<property type="entry name" value="fn3"/>
+<property type="match status" value="3"/>
+</dbReference>
+<dbReference type="Pfam" id="PF07714">
+<property type="entry name" value="Pkinase_Tyr"/>
+<property type="match status" value="1"/>
+</dbReference>
+<dbReference type="PRINTS" id="PR00109">
+<property type="entry name" value="TYRKINASE"/>
+</dbReference>
+<dbReference type="SMART" id="SM00060">
+<property type="entry name" value="FN3"/>
+<property type="match status" value="9"/>
+</dbReference>
+<dbReference type="SMART" id="SM00135">
+<property type="entry name" value="LY"/>
+<property type="match status" value="3"/>
+</dbReference>
+<dbReference type="SMART" id="SM00219">
+<property type="entry name" value="TyrKc"/>
+<property type="match status" value="1"/>
+</dbReference>
+<dbReference type="SUPFAM" id="SSF49265">
+<property type="entry name" value="SSF49265"/>
+<property type="match status" value="5"/>
+</dbReference>
+<dbReference type="SUPFAM" id="SSF56112">
+<property type="entry name" value="SSF56112"/>
+<property type="match status" value="1"/>
+</dbReference>
+<dbReference type="PROSITE" id="PS50853">
+<property type="entry name" value="FN3"/>
+<property type="match status" value="9"/>
+</dbReference>
+<dbReference type="PROSITE" id="PS00107">
+<property type="entry name" value="PROTEIN_KINASE_ATP"/>
+<property type="match status" value="1"/>
+</dbReference>
+<dbReference type="PROSITE" id="PS50011">
+<property type="entry name" value="PROTEIN_KINASE_DOM"/>
+<property type="match status" value="1"/>
+</dbReference>
+<dbReference type="PROSITE" id="PS00109">
+<property type="entry name" value="PROTEIN_KINASE_TYR"/>
+<property type="match status" value="1"/>
+</dbReference>
+<dbReference type="PROSITE" id="PS00239">
+<property type="entry name" value="RECEPTOR_TYR_KIN_II"/>
+<property type="match status" value="1"/>
+</dbReference>
+<proteinExistence type="evidence at protein level"/>
+<keyword id="KW-0067">ATP-binding</keyword>
+<keyword id="KW-1003">Cell membrane</keyword>
+<keyword id="KW-0181">Complete proteome</keyword>
+<keyword id="KW-0325">Glycoprotein</keyword>
+<keyword id="KW-0418">Kinase</keyword>
+<keyword id="KW-0472">Membrane</keyword>
+<keyword id="KW-0547">Nucleotide-binding</keyword>
+<keyword id="KW-0597">Phosphoprotein</keyword>
+<keyword id="KW-0656">Proto-oncogene</keyword>
+<keyword id="KW-0675">Receptor</keyword>
+<keyword id="KW-1185">Reference proteome</keyword>
+<keyword id="KW-0677">Repeat</keyword>
+<keyword id="KW-0732">Signal</keyword>
+<keyword id="KW-0808">Transferase</keyword>
+<keyword id="KW-0812">Transmembrane</keyword>
+<keyword id="KW-1133">Transmembrane helix</keyword>
+<keyword id="KW-0829">Tyrosine-protein kinase</keyword>
+<feature type="signal peptide" evidence="2">
+<location>
+<begin position="1"/>
+<end position="24"/>
+</location>
+</feature>
+<feature type="chain" description="Proto-oncogene tyrosine-protein kinase ROS" id="PRO_0000016723">
+<location>
+<begin position="25"/>
+<end position="2311"/>
+</location>
+</feature>
+<feature type="topological domain" description="Extracellular" evidence="2">
+<location>
+<begin position="25"/>
+<end position="1873"/>
+</location>
+</feature>
+<feature type="transmembrane region" description="Helical" evidence="2">
+<location>
+<begin position="1874"/>
+<end position="1898"/>
+</location>
+</feature>
+<feature type="topological domain" description="Cytoplasmic" evidence="2">
+<location>
+<begin position="1899"/>
+<end position="2311"/>
+</location>
+</feature>
+<feature type="domain" description="Fibronectin type-III 1" evidence="4">
+<location>
+<begin position="110"/>
+<end position="202"/>
+</location>
+</feature>
+<feature type="domain" description="Fibronectin type-III 2" evidence="4">
+<location>
+<begin position="203"/>
+<end position="294"/>
+</location>
+</feature>
+<feature type="domain" description="Fibronectin type-III 3" evidence="4">
+<location>
+<begin position="571"/>
+<end position="671"/>
+</location>
+</feature>
+<feature type="domain" description="Fibronectin type-III 4" evidence="4">
+<location>
+<begin position="952"/>
+<end position="1047"/>
+</location>
+</feature>
+<feature type="domain" description="Fibronectin type-III 5" evidence="4">
+<location>
+<begin position="1051"/>
+<end position="1158"/>
+</location>
+</feature>
+<feature type="domain" description="Fibronectin type-III 6" evidence="4">
+<location>
+<begin position="1459"/>
+<end position="1569"/>
+</location>
+</feature>
+<feature type="domain" description="Fibronectin type-III 7" evidence="4">
+<location>
+<begin position="1570"/>
+<end position="1669"/>
+</location>
+</feature>
+<feature type="domain" description="Fibronectin type-III 8" evidence="4">
+<location>
+<begin position="1671"/>
+<end position="1766"/>
+</location>
+</feature>
+<feature type="domain" description="Fibronectin type-III 9" evidence="4">
+<location>
+<begin position="1767"/>
+<end position="1868"/>
+</location>
+</feature>
+<feature type="domain" description="Protein kinase" evidence="3">
+<location>
+<begin position="1961"/>
+<end position="2240"/>
+</location>
+</feature>
+<feature type="nucleotide phosphate-binding region" description="ATP" evidence="3">
+<location>
+<begin position="1967"/>
+<end position="1975"/>
+</location>
+</feature>
+<feature type="active site" description="Proton acceptor" evidence="3 5">
+<location>
+<position position="2095"/>
+</location>
+</feature>
+<feature type="binding site" description="ATP" evidence="3">
+<location>
+<position position="1996"/>
+</location>
+</feature>
+<feature type="modified residue" description="Phosphotyrosine; by autocatalysis" evidence="1">
+<location>
+<position position="2131"/>
+</location>
+</feature>
+<feature type="glycosylation site" description="N-linked (GlcNAc...)" evidence="2">
+<location>
+<position position="49"/>
+</location>
+</feature>
+<feature type="glycosylation site" description="N-linked (GlcNAc...)" evidence="2">
+<location>
+<position position="65"/>
+</location>
+</feature>
+<feature type="glycosylation site" description="N-linked (GlcNAc...)" evidence="2">
+<location>
+<position position="77"/>
+</location>
+</feature>
+<feature type="glycosylation site" description="N-linked (GlcNAc...)" evidence="2">
+<location>
+<position position="123"/>
+</location>
+</feature>
+<feature type="glycosylation site" description="N-linked (GlcNAc...)" evidence="2">
+<location>
+<position position="132"/>
+</location>
+</feature>
+<feature type="glycosylation site" description="N-linked (GlcNAc...)" evidence="2">
+<location>
+<position position="265"/>
+</location>
+</feature>
+<feature type="glycosylation site" description="N-linked (GlcNAc...)" evidence="2">
+<location>
+<position position="287"/>
+</location>
+</feature>
+<feature type="glycosylation site" description="N-linked (GlcNAc...)" evidence="2">
+<location>
+<position position="307"/>
+</location>
+</feature>
+<feature type="glycosylation site" description="N-linked (GlcNAc...)" evidence="2">
+<location>
+<position position="333"/>
+</location>
+</feature>
+<feature type="glycosylation site" description="N-linked (GlcNAc...)" evidence="2">
+<location>
+<position position="377"/>
+</location>
+</feature>
+<feature type="glycosylation site" description="N-linked (GlcNAc...)" evidence="2">
+<location>
+<position position="405"/>
+</location>
+</feature>
+<feature type="glycosylation site" description="N-linked (GlcNAc...)" evidence="2">
+<location>
+<position position="480"/>
+</location>
+</feature>
+<feature type="glycosylation site" description="N-linked (GlcNAc...)" evidence="2">
+<location>
+<position position="607"/>
+</location>
+</feature>
+<feature type="glycosylation site" description="N-linked (GlcNAc...)" evidence="2">
+<location>
+<position position="628"/>
+</location>
+</feature>
+<feature type="glycosylation site" description="N-linked (GlcNAc...)" evidence="2">
+<location>
+<position position="706"/>
+</location>
+</feature>
+<feature type="glycosylation site" description="N-linked (GlcNAc...)" evidence="2">
+<location>
+<position position="714"/>
+</location>
+</feature>
+<feature type="glycosylation site" description="N-linked (GlcNAc...)" evidence="2">
+<location>
+<position position="911"/>
+</location>
+</feature>
+<feature type="glycosylation site" description="N-linked (GlcNAc...)" evidence="2">
+<location>
+<position position="940"/>
+</location>
+</feature>
+<feature type="glycosylation site" description="N-linked (GlcNAc...)" evidence="2">
+<location>
+<position position="962"/>
+</location>
+</feature>
+<feature type="glycosylation site" description="N-linked (GlcNAc...)" evidence="2">
+<location>
+<position position="971"/>
+</location>
+</feature>
+<feature type="glycosylation site" description="N-linked (GlcNAc...)" evidence="2">
+<location>
+<position position="1110"/>
+</location>
+</feature>
+<feature type="glycosylation site" description="N-linked (GlcNAc...)" evidence="2">
+<location>
+<position position="1154"/>
+</location>
+</feature>
+<feature type="glycosylation site" description="N-linked (GlcNAc...)" evidence="2">
+<location>
+<position position="1180"/>
+</location>
+</feature>
+<feature type="glycosylation site" description="N-linked (GlcNAc...)" evidence="2">
+<location>
+<position position="1233"/>
+</location>
+</feature>
+<feature type="glycosylation site" description="N-linked (GlcNAc...)" evidence="2">
+<location>
+<position position="1255"/>
+</location>
+</feature>
+<feature type="glycosylation site" description="N-linked (GlcNAc...)" evidence="2">
+<location>
+<position position="1282"/>
+</location>
+</feature>
+<feature type="glycosylation site" description="N-linked (GlcNAc...)" evidence="2">
+<location>
+<position position="1316"/>
+</location>
+</feature>
+<feature type="glycosylation site" description="N-linked (GlcNAc...)" evidence="2">
+<location>
+<position position="1470"/>
+</location>
+</feature>
+<feature type="glycosylation site" description="N-linked (GlcNAc...)" evidence="2">
+<location>
+<position position="1509"/>
+</location>
+</feature>
+<feature type="glycosylation site" description="N-linked (GlcNAc...)" evidence="2">
+<location>
+<position position="1588"/>
+</location>
+</feature>
+<feature type="glycosylation site" description="N-linked (GlcNAc...)" evidence="2">
+<location>
+<position position="1628"/>
+</location>
+</feature>
+<feature type="glycosylation site" description="N-linked (GlcNAc...)" evidence="2">
+<location>
+<position position="1682"/>
+</location>
+</feature>
+<feature type="glycosylation site" description="N-linked (GlcNAc...)" evidence="2">
+<location>
+<position position="1696"/>
+</location>
+</feature>
+<feature type="glycosylation site" description="N-linked (GlcNAc...)" evidence="2">
+<location>
+<position position="1730"/>
+</location>
+</feature>
+<feature type="glycosylation site" description="N-linked (GlcNAc...)" evidence="2">
+<location>
+<position position="1792"/>
+</location>
+</feature>
+<feature type="glycosylation site" description="N-linked (GlcNAc...)" evidence="2">
+<location>
+<position position="1795"/>
+</location>
+</feature>
+<feature type="glycosylation site" description="N-linked (GlcNAc...)" evidence="2">
+<location>
+<position position="1822"/>
+</location>
+</feature>
+<feature type="sequence conflict" description="In Ref. 2." ref="2" evidence="11">
+<original>N</original>
+<variation>S</variation>
+<location>
+<position position="1827"/>
+</location>
+</feature>
+<feature type="sequence conflict" description="In Ref. 3 and 4." ref="3 4" evidence="11">
+<original>IN</original>
+<variation>LP</variation>
+<location>
+<begin position="2140"/>
+<end position="2141"/>
+</location>
+</feature>
+<feature type="sequence conflict" description="In Ref. 3; AAA49058." ref="3" evidence="11">
+<original>FINQAFEDIDVPPADSDSILSTTLMEARDQEGLNYLVV</original>
+<variation>SSTKLLRVSLGSAVPTAFAQTCNSVNVESQNGLGWKGP</variation>
+<location>
+<begin position="2255"/>
+<end position="2292"/>
+</location>
+</feature>
+<evidence key="1" type="ECO:0000250"/>
+<evidence key="2" type="ECO:0000255"/>
+<evidence key="3" type="ECO:0000255">
+<source>
+<dbReference type="PROSITE-ProRule" id="PRU00159"/>
+</source>
+</evidence>
+<evidence key="4" type="ECO:0000255">
+<source>
+<dbReference type="PROSITE-ProRule" id="PRU00316"/>
+</source>
+</evidence>
+<evidence key="5" type="ECO:0000255">
+<source>
+<dbReference type="PROSITE-ProRule" id="PRU10028"/>
+</source>
+</evidence>
+<evidence key="6" type="ECO:0000269">
+<source>
+<dbReference type="PubMed" id="11094073"/>
+</source>
+</evidence>
+<evidence key="7" type="ECO:0000269">
+<source>
+<dbReference type="PubMed" id="11799110"/>
+</source>
+</evidence>
+<evidence key="8" type="ECO:0000269">
+<source>
+<dbReference type="PubMed" id="1900358"/>
+</source>
+</evidence>
+<evidence key="9" type="ECO:0000269">
+<source>
+<dbReference type="PubMed" id="8657124"/>
+</source>
+</evidence>
+<evidence key="10" type="ECO:0000269">
+<source>
+<dbReference type="PubMed" id="9774423"/>
+</source>
+</evidence>
+<evidence key="11" type="ECO:0000305"/>
+<evidence key="12" type="ECO:0000305">
+<source>
+<dbReference type="PubMed" id="8657124"/>
+</source>
+</evidence>
+<sequence length="2311" mass="260961" checksum="CF9680E5B0491417" modified="2004-07-05" version="3" precursor="true">
+MRNACLLLNRLGAFYFIWISAAYCSFSKNCQDLCTSNLEGELGIANLCNVSDINVACTQG
+CQFWNATEQVNCPLKCNKTYTRECETVSCKFGCSRAEDAYGVEAQNCLNKPGAPFASSIG
+SHNITLGWKPANISEVKYIIQWKFHQLPGDWRYTEVVSETSYTVKDLQAFTEYEFRVVWI
+ITSQLQLHSPPSPSYRTHASGVPTTAPIIKDIQSSSPNTVEVSWFPPLFPNGLIVGYNLV
+LTSENHELLRASRGHSFQFYSTFPNSTYRFSIVAVNEAGAGPPAEANITTPESKVKEKAK
+WLFLSRNQSLRKRYMEHFLEAAHCLQNGIIHHNITGISVNVYQQVVYFSEGNSIWVKGVV
+DMSDVSDLTLFYTGWGNITSISVDWLYQRMYFVMNEKIHVCQLENCTAAEDITPPYETSP
+RKIVADPYNGYIFCLLEDGIYRANLPLFPDTASAASLVVKSHTLRDFMINFQSKRLIFFN
+KTEQAFVSGFLDGSEFHTLRAHVPLDDMESFVYEDNIFTVTDGRAVFHEEISQVGSSSFN
+EYVVDCSLEYPEYFGFGNLLFYAASTQPYPLPTLPRLVTVLFGSDQAVISWSPPEYTIGT
+SRSAWQNWTYDVKVSSQSTFEEEWVVSNITDTRFAVKNLVSFTEYEMSVRAVSPAGEGPW
+SEPFRGMTFEEAEEEPYILAVGAEGLWKQRLDSYGPGEFLYPHIRNISDLDWYNDTLYWS
+NSMGKVQTWSMNKKEGTTENSYVPDIKNARMLAFDWLGQCLYWAGKANTIYRKSLLGDHM
+DVVAHVVYVVKDLAVDSVNGYLYWATTYTVESARLNGEEYLILQEHLQFSGKQVVGLALD
+LTSGFLYWLVQDGLCLNLYRISICKESCGNIMVTEISAWSVSEVSQNALQYYSGRLFWIN
+RLKFITTQELNQSISIPFSEPAEFAAFTLVHTSLKPLPGNFSFTPKVIPSSVPESSFKIK
+GNSSSFHIIWNASTDVQWGTVFYCVGSNALQMRTLESERCLHPHDLTVPSYKVDWLEPFT
+LFDFSVTPYTYWGKAPTTSVYLRAPEGVPSAPANPRIYVLHSNTHEGEEKVLVELRWDKP
+ERDNGVLTQFRVYYQLLYESGAADTLMEWNVSDVKPTALLFSIRDEHPRLTVRFQVQAFT
+SVGPGPMSDVAQRNSSDIFPVPTLITFSSNKLFLTDIDSNHTIWEVLTNRNIKDICYTAD
+DDKVYYILEDSLFLLNVQSTSESQLFEDVFLRNVTAITVDWIARHLFVAMKTSWNETQVF
+FIDLELKTKSLKALNIQLGKRNSTISSLLSYPFLSRLYWIEELDYGSRMFYYDILNNTMY
+HILGYESVEEKMRNYCNCNVAEAELGRPISIDVTDIKKPQLLFIRGRDEIWASDVDACHC
+WRITKIPSFQGTKIGSLTVDKQFIYWTIEKKEYTEICLADKESTRHSLQRKANHELKILA
+YSSAMQSYPDKKCLTPLLDTEKPTILDTTNTSFTLSLPSVTTQQLCPSISQPTPTYLVFF
+REITSNHENSTYHFSTLLQKTLEIQEPIAVINNLKPFSTYAIQVAVKNYYSNQNQLAVGR
+EAISTTLYGVPEGVDSIKTVVLSDTTINISWSEPLEPNGPLESIRYQISVNLLSLFPEAP
+LRKSEFPNGTLSWSVSDLQSGTNNLFKVLAFHPNENWFSESVPVIAKTFETPLSPSNIIP
+RNTSFQLEWRAPLHINGTSFWFELSKWQTRSDWFSPASTTCTVGPVYTCNLTGTLPSANY
+LVRATVVYVTGMKSTSSPTSFKTTAGVPSKPGTPKRAEDSKNSVQWEKAEDNGSNLTYYI
+LESRKQSGNTNKVKSLWVVVYNGSCDNICTWKAENLEGTFQFRAAAANMLGLGEYSDTSK
+DIVLAKDTVTSPDITAIVAVIGAVVLGLTIIILFGFVWHQRWKSRKPASTGQIVLVKEDK
+ELAQLRGMAETVGLANACYAVSTLPSQAEIESLPAFPRDKLNLHKLLGSGAFGEVYEGTA
+LDILADGSGESRVAVKTLKRGATDQEKSEFLKEAHLMSKFDHPHILKLLGVCLLNEPQYL
+ILELMEGGDLLSYLRGARKQKFQSPLLTLTDLLDICLDICKGCVYLEKMRFIHRDLAARN
+CLVSEKQYGSCSRVVKIGDFGLARDIYKNDYYRKRGEGLINVRWMAPESLIDGVFTNHSD
+VWAFGVLVWETLTLGQQPYPGLSNIEVLHHVRSGGRLESPNNCPDDIRDLMTRCWAQDPH
+NRPTFFYIQHKLQEIRHSPLCFSYFLGDKESVAGFINQAFEDIDVPPADSDSILSTTLME
+ARDQEGLNYLVVVKESNQDQGSISSAELTSV
+</sequence>
+</entry>
+<copyright>
+Copyrighted by the UniProt Consortium, see http://www.uniprot.org/terms
+Distributed under the Creative Commons Attribution-NoDerivs License
+</copyright>
+</uniprot>

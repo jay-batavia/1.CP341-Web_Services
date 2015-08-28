@@ -1,0 +1,57 @@
+curl http://localhost:8000
+{
+    "method_name": "GET",
+    "path_info": "/"
+}
+
+curl http://localhost:8000/endpoint
+{
+    "method_name": "GET",
+    "path_info": "/endpoint"
+}
+
+curl http://localhost:8000/endpoint?param1=val1
+{
+    "method_name": "GET",
+    "param1": "val1",
+    "path_info": "/endpoint"
+}
+
+curl http://localhost:8000/endpoint?param1=val1&param2=val2
+{
+    "method_name": "GET",
+    "param1": "val1",
+    "param2": "val2",
+    "path_info": "/endpoint"
+}
+
+
+curl --data "param1=value1" http://localhost:8000/12345
+{
+    "content_length": "13",
+    "method_name": "POST",
+    "param1": "value1",
+    "path_info": "/12345",
+    "query_string": ""
+}
+
+curl --data "param1=value1&param3=value3" "http://localhost:8000/endpoint?param2=value2&param4=value4"
+{
+    "content_length": "23",
+    "method_name": "POST",
+    "param1": "value1",
+    "param2": "value2",
+    "param3": "value3",
+    "param4": "value4",
+    "path_info": "/endpoint"
+}
+
+curl --data "param1=value1&param2=value2" --request PUT "http://localhost:8000/endpoint"
+{
+    "content_length": "27",
+    "method_name": "PUT",
+    "param1": "value1",
+    "param2": "value2",
+    "path_info": "/endpoint"
+}
+
