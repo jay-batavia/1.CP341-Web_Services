@@ -7,7 +7,6 @@ my_obj = warehouse_app()
 
 def generic_server(environ, start_response):
     response_text = my_obj.parse_request( environ )
-    print(response_text)
     status = response_text['status'] # HTTP Status
     headers = [('Content-type', 'text/plain; charset='+encoding)] # HTTP Headers
     start_response(status, headers)

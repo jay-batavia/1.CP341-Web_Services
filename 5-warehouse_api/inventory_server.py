@@ -26,8 +26,6 @@ class warehouse_app:
     def writeToInventoryFile(self, json_data, filename):
         try:
             f = open(filename, 'w')
-            print("loaded file")
-
             file_content = f.write(json_data)
 
         except FileNotFoundError:
@@ -51,11 +49,20 @@ class warehouse_app:
         except ValueError as e:
             raise e
 
-        item_name = update['item_name'][0]
-        item_quantity = update['item_quantity'][0]
+        try:
+            print("Update type ", type(update['item_name']))
+            item_name = update['item_name'][0]
+            item_quantity = update['item_quantity'][0]
+        except KeyError:
+            raise KeyError("Badly formed post body. Please try again")
 
-        file_dict[item_name] = item_quantity
-        file_json = json.dumps(file_dict, sort_keys=True, indent=4, separators=(',',': '))
+        if(int(item_quantity)<0):
+            raise ValueError("Quantity must be a positive number or zero")
+        else: 
+ 
+            file_dict[item_name] = item_quantity
+            file_json = json.dumps(file_dict, sort_keys=True, indent=4, separators=(',',': '))
+       
         try:
             self.writeToInventoryFile(file_json, "inventory.json")
         except:
@@ -65,22 +72,36 @@ class warehouse_app:
         return
 
 
-
-    def getItemQuantity(self, item_name):
+    def getItemQuantity(self, *args):
         item_quantity = {}
         file_json = self.loadInventoryFile('inventory.json')
+        if(len(args)==1):
+            item_name = args[0]
  
-        try:
-            item_quantity[item_name] = file_json[item_name]
-        except:
-            raise KeyError("Item not found in inventory, please check Item name or add it using /inventory/put")
-       
+            try:
+                item_quantity[item_name] = file_json[item_name]
+            except:
+                raise KeyError("Item not found in inventory, please check Item name or add it using /inventory/put")
+ 
+        elif(len(args)==0):
+            item_quantity = file_json
         return item_quantity
 
-    def getItemQuantity(self):
-        file_json = self.loadInventoryFile('inventory.json')
-        
-        return file_json
+
+    def deleteItem(self, inventory_id):
+        file_dict = self.loadInventoryFile('inventory.json')
+        if inventory_id in file_dict:
+            try:
+                del file_dict[inventory_id]
+                file_json = json.dumps(file_dict, sort_keys=True, indent=4, separators=(',',': '))
+                self.writeToInventoryFile(file_json, 'inventory.json')
+            except:
+                print("Error:", sys.exc_info()[0])
+        else:
+            raise LookupError("The item you're trying to delete does not exist.")
+        return
+
+
 
 
     def parse_request( self, environ ):
@@ -108,7 +129,7 @@ class warehouse_app:
                 response['text']= str(e)
                 pass
 
-        if url_list[1] == "inventory" and rm == "POST":
+        elif url_list[1] == "inventory" and rm == "POST":
             if len(environ['CONTENT_LENGTH']) > 0:
                 try:
                     request_body = environ['wsgi.input'].read(int(environ['CONTENT_LENGTH'])).decode('utf-8')
@@ -116,7 +137,38 @@ class warehouse_app:
                     self.updateInventory(query_params)
                     response['status'] = "200 OK"
                     response['text'] = 'Inventory successfully updated'
+
+                except ValueError as e:
+                    response['status'] = "400 Bad Request"
+                    response['text'] = "Please input positive quantities for items"
+
+                except KeyError as ke:
+                    response['status'] = "400 Bad Request"
+                    response['text'] = str(ke)
+
+                except TypeError as te:
+                    print("Typerror...", te)
+
                 except:
                     print("Error:", sys.exc_info()[0])
+
+        elif url_list[1] == "inventory" and rm == "DELETE":
+            try:
+                if(len(url_list)==3):
+                    inventory_id = url_list[2]
+                    self.deleteItem(inventory_id)
+                    response['status'] = "200 OK"
+                    response['text'] = "%s has been removed from inventory" % inventory_id
+
+                else:
+                    response['status'] = "400 Bad Request"
+                    response['text'] = "Can only delete individual items"
+            except LookupError as le:
+               response['status'] = "404 NOT FOUND"
+               response['text'] = str(le)
+
+        else:
+            response['status'] = "400 Bad Request"
+            response['text'] = "You have made an unsupported request. Please check the documentation"
 
         return response
