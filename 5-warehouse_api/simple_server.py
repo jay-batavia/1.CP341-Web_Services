@@ -1,9 +1,9 @@
-from inventory_server import warehouse_app
+from inventory_server import WarehouseApp
 from wsgiref.simple_server import make_server
 
 encoding = 'utf-8'
 port = 8000
-my_obj = warehouse_app()
+my_obj = WarehouseApp()
 
 def generic_server(environ, start_response):
     response_text = my_obj.parse_request( environ )
