@@ -169,7 +169,7 @@ class WarehouseApp:
             file_json = json.dumps(file_dict)
             self.writeToInventoryFile(file_json, inventory_filename)
         else:
-            raise LookupError("The item you're trying to delete does not exist.")
+            raise LookupError("The item you're trying to delete does not exist in the inventory.")
         return
 
 
@@ -265,6 +265,9 @@ class WarehouseApp:
                 except ValueError:
                     response['status'] = '400 Bad Request'
                     response['text'] = 'Cannot remove more than the number of items'
+                except KeyError:
+                    response['status'] = '404 NOT FOUND'
+                    response['text'] = 'The '
                
                 except:
                     response['status'] = '400 Bad Request'
@@ -272,7 +275,7 @@ class WarehouseApp:
 
             else:
                 response['status'] = '400 Bad Request'
-                response['text'] = ''
+                response['text'] = 'There must be a request_body'
 
         else:
             response['status'] = "400 Bad Request"
