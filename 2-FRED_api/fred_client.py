@@ -8,7 +8,7 @@ import http.client, urllib.parse
 
  
 
-def http_get(connection, path, id, dict={},):
+def http_get(connection, path, id, dict={}):
 
  dict['api_key'] = '65d553164ee45553def2ac6cab3f6c4c'
 
