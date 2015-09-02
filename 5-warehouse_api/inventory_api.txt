@@ -79,8 +79,45 @@ The /inventory endpoint is the main API endpoint. Requests to this endpoint with
 				400 Bad Request if the delete call is made to other endpoints.
 
 
-	The API will respond with HTTP Code 400 Bad Request for requests that are not supported. For example: curl -X POST "blahblah=blah" localhost:8000/invention would return a 400 Bad Request response. 
-
+The /inventory/bounded endpoint is to get items in the inventory whose quantities are between two given numbers.
 
 /inventory/bounded
-	The /inventory/bounded endpoint is to get items in the inventory whose quantities are between two given numbers.
+	A POST request to the /inventory/bounded with the "upper_bound" and "lower_bound" parameters will return all the inventory items that have that many left of them.
+		Request:
+			Method: POST
+			URI: inventory/bounded
+			Parameters: upper_bound, lower_bound
+			CURL Example: curl -X POST --data "upper_bound=24&lower_bound=15" localhost:8000/inventory/bounded
+
+		Response:
+			HTTP Status Codes:
+				200 OK if the query returned a result.
+				400 Bad Request if the paramter string is incorrectly formed. e.g using string instead of integers for the bounds.
+				404 Not Found if there were no items in the given bound
+
+			Response Body Example:
+				{"ps2": "18", "ps4": "21"}
+
+			The response body is a JSON string with all the items that match the quantity restrcitions and their corresponding quantities.
+
+
+
+The /inventory/{item_name} endpoint can be used to remove or add quantities of a particular item in the inventory.
+
+/inventory/{item_name}
+	A POST request to the /inventory/{item_name} with either the "add_quantity" or "remove_quantity" parameters will update the item quantities by either removing or adding a given number to its quantity in the inventory.
+		Method: POST
+		URI: inventory/{item_name}
+		Parameters: add_quantity or remove_quantity
+		CURL Example: curl -X POST --data "add_quantity=20" localhost:8000/inventory/ps4
+
+		Response:
+			HTTP Status Codes:
+				200 OK if the query was successful and the item quantity is update in the inventory
+				404 NOT FOUND if the queried item was not found in the inventory
+				400 Bad Request if the query in the request body is malformed.
+
+Each server response has a body. If it is not a returned query, it will be a short explanation of the error. e.g. "The item you're trying to delete does not exist in the inventory." if the DELETE request is for a non-existent item in the inventory. 
+
+			
+The API will respond with HTTP Code 400 Bad Request for requests that are not supported. For example: curl -X POST "blahblah=blah" localhost:8000/invention would return a 400 Bad Request response. 
