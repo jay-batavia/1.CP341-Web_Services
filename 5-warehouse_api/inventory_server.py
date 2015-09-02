@@ -2,9 +2,17 @@ import json
 import io
 from urllib import parse
 import sys
+import os.path
 
 inventory_filename = "inventory.json"
 class WarehouseApp:
+
+    def createInventoryFile(filename):
+        if(os.path.isfile(filename)):
+            pass;
+        else:
+            f = open(filename, 'w')
+            f.close()
 
 
     def loadInventoryFile(self, filename):
@@ -13,7 +21,7 @@ class WarehouseApp:
             f = open(filename, 'r')
             file_content = f.read()
         except FileNotFoundError:
-            raise FileNotFoundError("Inventory file does not exist. Refer to documentation for /file endpoint")
+            raise FileNotFoundError("Inventory file does not exist. Add items to begin.")
 
         if(len(file_content)==0):
             pass
@@ -24,17 +32,17 @@ class WarehouseApp:
         f.close()
         return file_dict
 
+
     def writeToInventoryFile(self, json_data, filename):
         try:
             f = open(filename, 'w')
             file_content = f.write(json_data)
 
         except FileNotFoundError:
-            raise FileNotFoundError("Inventory file does not exist. Refer to documentation for /file endpoint")
+            raise FileNotFoundError("Inventory file does not exist.")
 
         except TypeError as e:
-            print ("Error:", str(e))
-            raise 
+            raise e("TypeError")
         # ose("Inventory file does not exist. Refer to documentation for /file endpoint")
 
         # f.write(json_data)
@@ -42,27 +50,66 @@ class WarehouseApp:
         f.close()
         return
 
+
+    def updateItemQuantity(self, item_name, update):
+        print("in updateitemquantity")
+        try:
+            file_dict = self.loadInventoryFile(inventory_filename)
+        except:
+            print("Load inventory file error")
+
+        if item_name in file_dict:
+            original_quantity = int(file_dict[item_name])
+
+        else:
+            raise KeyError("inventory item not found")
+
+        if "add_quantity" in update:
+            addition_number = int(update['add_quantity'][0])
+
+            total = original_quantity + addition_number
+
+        elif "remove_quantity" in update:
+            remove_number = int(update['remove_quantity'][0])
+            total = original_quantity - remove_number
+            if total < 0:
+                raise ValueError
+
+        file_dict[item_name] = str(total)
+
+        file_json = json.dumps(file_dict)
+
+        try:
+            self.writeToInventoryFile(file_json, inventory_filename)
+        except:
+            raise
+        
+        return
+
+
     def updateInventory(self, update):
         try:
             file_dict = self.loadInventoryFile(inventory_filename)
         except FileNotFoundError as fileError:
-            print("valuerror line 52")
             raise fileError("FileError")
         except ValueError as e:
             raise e
+        
 
-        try:
-            item_name = update['item_name'][0]
-            item_quantity = update['item_quantity'][0]
-        except KeyError:
-            raise KeyError("Badly formed post body. Please try again")
+        for i in range(len(update['item_name'])):
+            try:    
+                item_name = update['item_name'][i]
+                item_quantity = update['item_quantity'][i]
+            except:
+                raise KeyError("Badly formed post body. Please try again")
 
-        if(int(item_quantity)<0):
-            raise ValueError("Quantity must be a positive number or zero")
-        else: 
- 
-            file_dict[item_name] = item_quantity.strip()
-            file_json = json.dumps(file_dict)
+            if(int(item_quantity)<0):
+                raise ValueError("Quantity must be a positive number")
+            else: 
+     
+                file_dict[str.lower(item_name)] = item_quantity.strip()
+
+        file_json = json.dumps(file_dict)
        
         try:
             self.writeToInventoryFile(file_json, inventory_filename)
@@ -74,42 +121,63 @@ class WarehouseApp:
 
     def getItemQuantity(self, *args):
         item_quantity = {}
-        file_json = self.loadInventoryFile(inventory_filename)
+        file_dict = self.loadInventoryFile(inventory_filename)
         if(len(args)==1):
-            item_name = args[0]
+            item_name = str.lower(args[0])
             try:
-                item_quantity[item_name] = file_json[item_name]
+                item_quantity[item_name] = file_dict[item_name]
             except:
                 raise KeyError("Item not found in inventory, please check Item name or add it using /inventory")
  
         elif(len(args)==0):
-            item_quantity = file_json
+            item_quantity = file_dict
 
         return item_quantity
 
+    def getBoundedItems(self, query_params):
+        bounded_dict = {}
+        file_dict = self.loadInventoryFile(inventory_filename)
+        if "lower_bound" in query_params and "upper_bound" in query_params:
+            upper_bound = query_params["upper_bound"][0]
+            print("upper bound: "+ upper_bound)
+            lower_bound = query_params["lower_bound"][0]
+            print("lower bound: "+ lower_bound)
+        elif "upper_bound" in query_params:
+            upper_bound = query_params["upper_bound"][0]
+            lower_bound = 0
+        elif "lower_bound" in query_params:
+            lower_bound = query_params["lower_bound"][0]
+            upper_bound = 1000000
+
+        else:
+            raise KeyError("Badly formed post body")
+
+        try:
+            for key, val in file_dict.items():
+                if int(val) >= int(lower_bound) and int(val) <= int(upper_bound):
+                    bounded_dict[key] = val
+        except:
+            raise
+
+        return bounded_dict
+
 
     def deleteItem(self, inventory_id):
-        deleted = False
         file_dict = self.loadInventoryFile(inventory_filename)
         if inventory_id in file_dict:
-            try:
-                del file_dict[inventory_id]
-                file_json = json.dumps(file_dict)
-                self.writeToInventoryFile(file_json, inventory_filename)
-            except:
-                print("Error:", sys.exc_info()[0])
+            del file_dict[inventory_id]
+            file_json = json.dumps(file_dict)
+            self.writeToInventoryFile(file_json, inventory_filename)
         else:
             raise LookupError("The item you're trying to delete does not exist.")
         return
-
-
 
 
     def parse_request( self, environ ):
         qs = environ['QUERY_STRING']
         rm = environ['REQUEST_METHOD']
         pi = environ['PATH_INFO']
-        response = {}
+        response = {'status': "", 'text': ""}
         url_list = pi.split('/')
 
 
@@ -128,7 +196,9 @@ class WarehouseApp:
                 response['text']= str(e)
                 pass
 
-        elif url_list[1] == "inventory" and rm == "POST":
+
+
+        elif len(url_list) == 2 and url_list[1] == "inventory" and rm == "POST":
             if len(environ['CONTENT_LENGTH']) > 0:
                 try:
                     request_body = environ['wsgi.input'].read(int(environ['CONTENT_LENGTH'])).decode('utf-8')
@@ -137,9 +207,14 @@ class WarehouseApp:
                     response['status'] = "200 OK"
                     response['text'] = 'Inventory successfully updated'
 
-                except():
+                except:
                     response['status'] = "400 Bad Request"
                     response['text'] = "Update request not properly formed."
+            else:
+                response['status'] = "400 Bad Request"
+                response['text'] = ""
+
+
 
         elif url_list[1] == "inventory" and rm == "DELETE":
             try:
@@ -151,13 +226,58 @@ class WarehouseApp:
 
                 else:
                     response['status'] = "400 Bad Request"
-                    response['text'] = "Can only delete individual items"
             except LookupError as le:
                response['status'] = "404 NOT FOUND"
                response['text'] = str(le)
+
+
+
+        elif url_list[1] == "inventory" and url_list[2] == "bounded" and rm == "POST":
+            if len(environ['CONTENT_LENGTH']) > 0:
+                request_body = environ['wsgi.input'].read(int(environ['CONTENT_LENGTH'])).decode('utf-8')
+
+                try:
+                    query_params = parse.parse_qs(request_body)
+                    bounded_items = self.getBoundedItems(query_params)
+                    response['status'] = '200 OK'
+                    response['text'] = json.dumps(bounded_items)
+
+                except:
+                    response['status'] = '400 Bad Request'
+                    response['text'] = 'Request body not properly formed. Bounds must be integers'
+
+
+
+
+
+        elif url_list[1] == "inventory" and len(url_list[2]) > 0 and rm == "POST":
+            item_name = url_list[2]
+
+            if len(environ['CONTENT_LENGTH']) > 0:
+                request_body = environ['wsgi.input'].read(int(environ['CONTENT_LENGTH'])).decode('utf-8')
+
+                try:
+                    query_params = parse.parse_qs(request_body)
+                    self.updateItemQuantity(item_name, query_params)
+                    response['status'] = '200 OK'
+                    response['text'] = '%s quantity updated' % item_name
+
+                except ValueError:
+                    response['status'] = '400 Bad Request'
+                    response['text'] = 'Cannot remove more than the number of items'
+               
+                except:
+                    response['status'] = '400 Bad Request'
+                    response['text'] = 'Update request not properly formed'            
+
+            else:
+                response['status'] = '400 Bad Request'
+                response['text'] = ''
 
         else:
             response['status'] = "400 Bad Request"
             response['text'] = "You have made an unsupported request. Please check the documentation"
 
         return response
+
+    createInventoryFile(inventory_filename)
