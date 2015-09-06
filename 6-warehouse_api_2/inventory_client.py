@@ -75,7 +75,7 @@ print("RES: "+ getItemQuantity(connection, "/inventory/PS4")+"\n")
 
 #Add item and its quantity to the inventory
 print("REQ: method=POST params={item_name: SEGA, item_quantity: 25} /inventory (valid)")
-print("RES: "+ updateInventory(connection, {'item_name': 'SEGA', 'item_quantity':'25'}, "/inventory")+"\n")
+print("RES: "+ updateInventory(connection, {'item_name': 'sega', 'item_quantity':'25'}, "/inventory")+"\n")
 
 #Check if item was added to inventory
 print("REQ: method=GET /inventory/SEGA (valid)")
@@ -94,9 +94,17 @@ print("REQ: method=DELETE /inventory (invalid)")
 print("RES: "+ deleteInventoryItem(connection, "/inventory")+"\n")
 
 #Delete individual item
-print("REQ: method=DELETE /inventory/PS4 (valid)")
-print("RES: "+ deleteInventoryItem(connection, "/inventory/PS4")+"\n")
+print("REQ: method=DELETE /inventory/SEGA (valid)")
+print("RES: "+ deleteInventoryItem(connection, "/inventory/SEGA")+"\n")
 
 #Check if item deleted
 print("REQ: method=GET /inventory (valid)")
 print("RES: "+ getItemQuantity(connection, "/inventory")+"\n")
+
+#Add multiple items at once
+print("REQ: method=POST params={item_name=snes, item_quantity=23, item_name=nes, item_quantity=28} /inventory (valid)")
+print("RES: "+ updateInventory(connection, {'item_name':'snes', 'item_quantity':'23', 'item_name':'nes', 'item_quantity':'28'}, "/inventory")+"\n")
+
+#Check if all items were added
+print("REQ: method=GET /inventory")
+print("RES: "+getItemQuantity(connection, "/inventory")+"\n")

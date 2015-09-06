@@ -3,9 +3,10 @@ import io
 from urllib import parse
 import sys
 import os.path
+import warehouse
 
-class WarehouseApp:
 inventory_filename = "inventory.json"
+class WarehouseApp_Impl_file(warehouse.Warehouse):
 
     def createInventoryFile(filename):
         if(os.path.isfile(filename)):
@@ -52,7 +53,6 @@ inventory_filename = "inventory.json"
 
 
     def updateItemQuantity(self, item_name, update):
-        print("in updateitemquantity")
         try:
             file_dict = self.loadInventoryFile(inventory_filename)
         except:
@@ -197,7 +197,6 @@ inventory_filename = "inventory.json"
                 pass
 
 
-
         elif len(url_list) == 2 and url_list[1] == "inventory" and rm == "POST":
             if len(environ['CONTENT_LENGTH']) > 0:
                 try:
@@ -245,8 +244,6 @@ inventory_filename = "inventory.json"
                 except:
                     response['status'] = '400 Bad Request'
                     response['text'] = 'Request body not properly formed. Bounds must be integers'
-
-
 
 
 

@@ -18,7 +18,7 @@ class Warehouse(metaclass = abc.ABCMeta):
 		return
 		
 	@abc.abstractmethod
-	def getBondedItems(self, query_params):
+	def getBoundedItems(self, query_params):
 		'''Retrieve the items whose inventory matches the restricted quantities.'''
 		return
 
@@ -26,4 +26,8 @@ class Warehouse(metaclass = abc.ABCMeta):
 	def deleteItem(self, inventory_id):
 		'''Remove the specified item from inventory'''
 		return
-		
+
+	@abc.abstractmethod
+	def parse_request(self, environ):
+		'''Routes requests to different endpoints and generate HTTP responses'''
+		return
