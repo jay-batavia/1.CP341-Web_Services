@@ -3,8 +3,6 @@
 import sys
 from wsgiref.simple_server import make_server
 import warehouse_dispatcher
-import storage_file
-import storage_db
 
 encoding   = 'utf-8'
 port       = 8000

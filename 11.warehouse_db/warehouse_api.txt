@@ -1,0 +1,177 @@
+Name: Jay Batavia
+Honor Code Upheld
+
+The Inventory API Documentation
+
+Note: Introduced in the new version are response size limits. The server now limits the number of inventory items sent based on a pre-determined limit or a client specified limit (whichever is lower). In order to make it easier to get to specific results, the results will now be paginated and specific pages only can be easily retrieved.
+
+This is the documentation for a simple Warehouse inventory API. This API is made, for the most part, with REST principles in mind. It uses different HTTP methods and URIs to fetch and update resources on the server.
+
+The /inventory endpoint is the main API endpoint. Requests to this endpoint with different methods and parameters will then fetch different resources.
+
+
+/inventory
+
+
+	A GET request to /inventory will fetch the whole inventory.
+		Request:
+			Method: GET
+			URI: /inventory
+			CURL Example: curl localhost:8000/inventory
+
+		HTTP Status Codes:
+			200 OK if the query was successfull
+			404 NOT FOUND is the item does not exist in the inventory
+
+		Response Body Example:
+			Example: {"ps1": "10", "ps2": "18", "ps3": "54", "ps4": "80"}
+
+			The response is a JSON string with all of the items in the inventories and their corresponding quantities
+
+
+	A GET request to /inventory/{item name} will fetch the quantity of a particular item in the inventory.
+		Request:
+			Method: GET
+			URI: /inventory/{item name}
+			CURL Example: curl localhost:800/inventory/ps4
+
+			The item name is not case sensitive to avoid duplicates. So "PS4" is the same item as "ps4".
+
+		HTTP Status COde:
+			200 OK if the query was successful.
+			404 Not Found if the item requested does not exist.
+
+		Response Body Example:
+			Example: {"ps4":"80"}
+
+			The API will respond with 200 OK if the item exists, and the response text is a JSON string with the item name and its corresponding quantity in the inventory. The server responds with HTTP Status Code 404 NOT FOUND if the item is not in the inventory. 
+
+
+	A POST request to /inventory with "item_name" and "item_quantity" is used to update the inventory with a new item or to update the quantity of an existing item.
+		Request: 
+			Method: POST
+			URI: /inventory
+			Parameters: item_name, item_quantity
+			CURL Example: curl -X POST --data "item_name=ps5&item_quantity=24" localhost:8000/inventory
+
+			The parameters are to be to posted in the body of the request.
+
+		Response:
+			HTTP Status Codes:
+				201 Created if the update/insert operation was successful.
+				400 Bad Request if the request body with the parameters is not properly formed, or if it is empty.
+
+		
+
+	A POST request to /inventory could also be made with multiple parameters to add multiple items and their corresponding quantities at a time.
+		Request:
+			Method: POST
+			URI: /inventory
+			Parameters: item_name, item_quantity
+			CURL Example: curl -X POST --data "item_name=ps5&item_quantity=24&item_name=ps3&item_quantity=21" localhost:8000/inventory
+
+			In the above example the inventory would be updated with "ps5": "24" and "ps3": "21". Alternatively the following example would yield the same result:
+
+				curl -X POST --data "item_name=ps5&item_name=ps3&item_quantity=24&item_quantity=21" localhost:8000/inventory
+
+			So the order in which the item names appear has to be the same as the order in which the corresponding quantities appear.
+
+		Response:
+			HTTP Status Codes:
+				201 Created if the update/insert operation was successful
+				400 Bad Request if the request has incomplete parameters, or if the request body is improperly formed, or if it is empty.
+
+
+
+	A DELETE request to /inventory/{item name} is used to remove an item from the existing inventory.
+		Request:
+			Method: DELETE
+			URI: /inventory/{item name}
+			CURL Example: curl -X DELETE localhost:8000/ps5
+
+		Response:
+			HTTP Status Codes:
+				204 No Content if the delete operation was successful.
+				404 NOT FOUND if the item is not in the inventory.
+				400 Bad Request if the delete call is made to other endpoints.
+
+
+The /inventory/bounded endpoint is to get items in the inventory whose quantities are between two given numbers.
+
+/inventory/bounded
+	A GET request to the /inventory/bounded with the "upper_bound" and "lower_bound" parameters will return all the inventory items that have that many left of them.
+		Request:
+			Method: GET
+			URI: inventory/bounded
+			Parameters: upper_bound, lower_bound
+			CURL Example: curl -X GET localhost:8000/inventory/bounded?upper_bound=24&lower_bound=15
+
+		Response:
+			HTTP Status Codes:
+				200 OK if the query returned a result.
+				400 Bad Request if the paramter string is incorrectly formed. e.g using string instead of integers for the bounds.
+				404 Not Found if there were no items in the given bound
+
+			Response Body Example:
+				{"ps2": "18", "ps4": "21"}
+
+			The response body is a JSON string with all the items that match the quantity restrcitions and their corresponding quantities.
+
+The /inventory/total endpoint is used to get the total number of different items in the warehouse.
+
+
+/inventory/total
+	A GET request to inventory/total without any parameters will return the total number of items in the inventory.
+	Request:
+		Method: GET
+		URI: inventory/total
+		CURL Example: curl localhost:8000/inventory/total
+
+	Response:
+		HTTP Status Codes:
+			200 OK if the query returned a result.
+			404 Not Found if the inventory is empty.
+
+		Response Body Example:
+			18
+
+		The response body is just a single number which is the total.
+
+
+
+The /inventory/{item_name} endpoint can be used to remove or add quantities of a particular item in the inventory.
+
+/inventory/{item_name}
+	A POST request to the /inventory/{item_name} with either the "add_quantity" or "remove_quantity" parameters will update the item quantities by either removing or adding a given number to its quantity in the inventory.
+		Method: POST
+		URI: inventory/{item_name}
+		Parameters: add_quantity or remove_quantity
+		CURL Example: curl -X POST --data "add_quantity=20" localhost:8000/inventory/ps4
+
+		Response:
+			HTTP Status Codes:
+				200 OK if the query was successful and the item quantity is update in the inventory
+				404 NOT FOUND if the queried item was not found in the inventory
+				400 Bad Request if the query in the request body is malformed.
+
+
+Optional Parameters:
+		Request:
+			Method: GET
+			URI: /inventory
+			Query Params: page, number, prefix
+			CURL Example: curl localhost:8000/inventory?prefix=pa&number=4&page=2
+
+		Response Body Example:
+			Example:
+				{"pacemaker": 10, "pacifier": 14, "parachute": 54, "parasol": 80, "page_": 2, "total_pages": 4}
+
+	The 'number' parameter will determine the number of results per page and the 'page' parameter determines which page is returned. If a different 'number' is used, the pagination will be different.
+	The 'prefix' parameter will fetch the items which begin with the specified string.
+	Included in the JSON response are the 'page_' and 'total_pages' elements, which specify the current page and the total number of pages for the query.
+	These optional parameters can now be appended to any query which will return multiple results.
+
+
+Each server response has a body. If it is not a returned query, it will be a short explanation of the error. e.g. "The item you're trying to delete does not exist in the inventory." if the DELETE request is for a non-existent item in the inventory. 
+s			
+The API will respond with HTTP Code 400 Bad Request for requests that are not supported. For example: curl -X POST "blahblah=blah" localhost:8000/invention would return a 400 Bad Request response. 

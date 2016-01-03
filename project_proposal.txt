@@ -1,0 +1,9 @@
+Name: Jay Batavia
+
+APIs to be used: New York Times, Reddit, and Twitter APIs
+
+The goal is to create a web-service/api that brings all the most often used and popular web news/media sources and aggregrate them in one place. Towards that end, this project would start by leveraging the New York Times API to get the most shared news stories, use the twitter and reddit APIs to find and display related tweets and posts respectively.
+
+Further features could include getting the top comments for these stories, related images, etc.
+
+I still haven't decided whether I want it to just be a web-page or if I want to write a python client. 

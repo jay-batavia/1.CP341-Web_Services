@@ -117,7 +117,8 @@ The /inventory/{item_name} endpoint can be used to remove or add quantities of a
 				404 NOT FOUND if the queried item was not found in the inventory
 				400 Bad Request if the query in the request body is malformed.
 
-Each server response has a body. If it is not a returned query, it will be a short explanation of the error. e.g. "The item you're trying to delete does not exist in the inventory." if the DELETE request is for a non-existent item in the inventory. 
 
-			
+
+Each server response has a body. If it is not a returned query, it will be a short explanation of the error. e.g. "The item you're trying to delete does not exist in the inventory." if the DELETE request is for a non-existent item in the inventory. 
+s			
 The API will respond with HTTP Code 400 Bad Request for requests that are not supported. For example: curl -X POST "blahblah=blah" localhost:8000/invention would return a 400 Bad Request response. 

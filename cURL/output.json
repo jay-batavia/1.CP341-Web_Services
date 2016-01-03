@@ -1,0 +1,7 @@
+{
+    "content_length": "13",
+    "method_name": "POST",
+    "param1": "value1",
+    "path_info": "/12345",
+    "query_string": ""
+}

@@ -31,7 +31,11 @@ def getBoundedItems( connection, bounds, path ):
 	response = connection.getresponse()
 	if response.status == 200:
 		data = response.read()
-		inventory_list = json.loads(data.decode(encoding))
+		decoded_data = data.decode(encoding)
+		data_list = decoded_data.split('\n')
+		json_data = data_list[1]
+		inventory_list = json.loads(json_data)
+		print(data_list[0])
 		print("Item     Quantity")
 		print("=================")
 		for k, v in inventory_list.items():
@@ -44,7 +48,11 @@ def getItemQty( connection, path ):
 	response = connection.getresponse()
 	if response.status == 200:
 		data = response.read()
-		inventory_list = json.loads(data.decode(encoding))
+		decoded_data = data.decode(encoding)
+		data_list = decoded_data.split('\n')
+		json_data = data_list[1]
+		inventory_list = json.loads(json_data)
+		print(data_list[0])
 		if len(path.split("/")) == 3:
 			for k,v in inventory_list.items():
 				print( "\nItem name: %s, Quantity left: %d.\n"% (k, v))

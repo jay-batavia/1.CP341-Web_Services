@@ -26,7 +26,6 @@ class StorageDB( storage.WarehouseStorage ):
         self.cur.execute('REPLACE INTO Items (item, quantity) VALUES(?, ?)', (item_name, new_quantity))
 
 
-
     def addItem( self, item_name, quantity ):
         # self.cur.execute( 'INSERT OR REPLACE INTO Items (name, qty) VALUES (%s, %d)' %
         #                   ( item_name, quantity ) )

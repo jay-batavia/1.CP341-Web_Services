@@ -1,0 +1,7 @@
+{
+    " filename": "\"output.json\"\r\nContent-Type: application/octet-stream\r\n\r\n{\n    \"content_length\": \"13\",\n    \"method_name\": \"POST\",\n    \"param1\": \"value1\",\n    \"path_info\": \"/12345\",\n    \"query_string\": \"\"\n}\r\n--------------------------69cdae6f62303290--\r\n",
+    " name": "\"fileupload\"",
+    "content_length": "341",
+    "method_name": "POST",
+    "path_info": "/endpoint"
+}

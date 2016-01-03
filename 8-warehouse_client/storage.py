@@ -1,3 +1,4 @@
+
 import abc
 
 class WarehouseStorage( metaclass = abc.ABCMeta ):
@@ -19,9 +20,19 @@ class WarehouseStorage( metaclass = abc.ABCMeta ):
         return
 
     @abc.abstractmethod
-    def getItemQty( self, item_name ):
+    def getItemQty( self, item_name, query_params ):
         """Get the quantity for a specific item in the inventory"""
         return
+
+    # @abc.abstractmethod
+    # def getPrefixItems( self, pattern ):
+    #     """Get the items whose names start with a given prefix"""
+    #     return
+
+    # @abc.abstractmethod
+    # def getTotalItems ( self ):
+    #     """Get the total number items in the inventory"""
+    #     return
 
     @abc.abstractmethod
     def delItem( self, item_name ):
